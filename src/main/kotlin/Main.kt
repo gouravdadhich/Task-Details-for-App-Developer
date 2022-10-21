@@ -64,10 +64,19 @@ fun main() {
         print("-")
     }
 
-      result.sortByDescending {
-          it.area
-      }
-    for (item in result){
-       println("\n ${item.type} id : ${item.id} area:${item.area} and perimeter : ${item.perimeter}")
+    for(i in 0 until result.lastIndex){
+        for (j in (i+1)..result.lastIndex){
+            if (result[i].area <= result[j].area){
+                val temp =  result[i]
+                result[i] = result[j]
+                result[j] = temp
+            }
+        }
     }
+
+    for (item in result){
+        print("\n ${item.type} id : ${item.id} area : ${item.area} Perimeter : ${item.perimeter}")
+    }
+
+
 }
