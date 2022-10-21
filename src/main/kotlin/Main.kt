@@ -13,7 +13,7 @@ fun main() {
     val numberOfShapes = reader.nextInt()
 
     for(i in 1..numberOfShapes){
-        print("Enter the $i shape you want : \n 1 : Circle \n 2 : TriAngle \n 3 : RectAngle \n")
+        print("Enter the $i shape you want : \n 1 : Circle \n 2 : TriAngle \n 3 : RectAngle \n Please Select the above given shapes numbered 1 , 2 , 3 only \n")
         (
             when (reader.nextInt()) {
                 1 -> {
